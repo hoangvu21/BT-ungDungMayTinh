@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="Sothu1">
+        <input type="text" id="Sothu2"><br><br>
+        <button value="Add" onclick="Cal(this.value)">Addition(+)</button>
+        <button value="Sub" onclick="Cal(this.value)">Subtraction(-)</button>
+        <button value="Mul" onclick="Cal(this.value)">Multiplication(X)</button>
+        <button value="Div" onclick="Cal(this.value)">Division(/)</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        //Sử dụng 1 hàm
+        function Cal(value){
+            let so1= parseFloat(document.getElementById("Sothu1").value);
+            let so2= parseFloat(document.getElementById("Sothu2").value);
+            if(value == "Add"){
+                document.getElementById("result").innerHTML= "Result Addition: " + (so1+so2);
+            }else if(value == "Sub"){
+                document.getElementById("result").innerHTML= "Result Subtraction: " + (so1-so2);
+            }else if(value == "Mul"){
+                document.getElementById("result").innerHTML= "Result Multiplication: " + (so1*so2);
+            }else{
+                document.getElementById("result").innerHTML= "Result Division: " + (so1/so2);
+            }
+        }
+    </script>
+</body>
+
+</html>

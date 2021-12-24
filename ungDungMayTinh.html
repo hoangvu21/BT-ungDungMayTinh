@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <h1>Cacultor</h1>
+    <form action="#">
+        <input type="text" id="Sothu1">
+        <input type="text" id="Sothu2"><br><br>
+        <button onclick="Add()">Addition(+)</button>
+        <button onclick="Sub()">Subtraction(-)</button>
+        <button onclick="Mul()">Multiplication(X)</button>
+        <button onclick="Div()">Division(/)</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        //Sử dụng 4 hàm
+        function Add(){
+            let so1= parseFloat(document.getElementById("Sothu1").value);
+            let so2= parseFloat(document.getElementById("Sothu2").value);
+            document.getElementById("result").innerHTML="Result Adittion: " + (so1+so2);
+        }
+        function Sub(){
+            let so1= parseFloat(document.getElementById("Sothu1").value);
+            let so2= parseFloat(document.getElementById("Sothu2").value);
+            document.getElementById("result").innerHTML="Result Subtraction: " + (so1-so2);
+        }
+        function Mul(){
+            let so1= parseFloat(document.getElementById("Sothu1").value);
+            let so2= parseFloat(document.getElementById("Sothu2").value);
+            document.getElementById("result").innerHTML="Result Multiplication: " + (so1*so2);
+        }
+        function Div(){
+            let so1= parseFloat(document.getElementById("Sothu1").value);
+            let so2= parseFloat(document.getElementById("Sothu2").value);
+            document.getElementById("result").innerHTML="Result Division: " + (so1/so2);
+        }
+    </script>
+</body>
+</html>
